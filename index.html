@@ -3,16 +3,34 @@
 <head>
 <meta charset="UTF-8">
 <title>Read Twitter DM's Bookmarklet</title>
+<style>
+pre { 
+	background-color:#dedede; 
+	border-radius: 10px; 
+	padding: 10px;
+}
+</style>
 </head>
 
 <body>
 <p>This bookmarklet will mark all of you Twitter direct messages as read simply by deleting the entry in local storage.</p>
 <p>The Code: </p>
 <pre>
-window.localStorage.removeItem('dm_threads');
+//Get the URL
+var urlistwitter=window.location.href.split('/')[2].split('.'); 
+
+// Check to see if the domain is twitter
+if(urlistwitter[urlistwitter.length-2]==='twitter') {
+
+   // remove the local storage item of unread DM references
+   window.localStorage.removeItem('dm_threads');
+}
+
+// remove the icon that makes them appear unread
+document.querySelector('#user-dropdown-toggle .nav-new').style.display='none';
 </pre>
 <p>Drag this link to your toolbar:</p>
-<p><a href="javascript:var urlistwitter=window.location.href.split('/')[2].split('.'); if(urlistwitter[urlistwitter.length-2]=='twitter')window.localStorage.removeItem('dm_threads');document.querySelector('#user-dropdown-toggle .nav-new').style.display='none'">Mark DMs as Read</a></p>
-<p>Note the UI will appear as if 
+<p><a href="javascript:var urlistwitter=window.location.href.split('/')[2].split('.'); if(urlistwitter[urlistwitter.length-2]==='twitter')window.localStorage.removeItem('dm_threads');document.querySelector('#user-dropdown-toggle .nav-new').style.display='none';">Mark DMs as Read</a></p>
+<p>Created by <a href="http://twitter.com/estellevw">@estellevw</a>. Pull request for improvements welcome.</p> 
 </body>
 </html>
