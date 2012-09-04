@@ -34,7 +34,7 @@ if(urlistwitter[urlistwitter.length-2]==='twitter') {
 document.querySelector('#user-dropdown-toggle .nav-new').style.display='none';
 </pre>
 <p>Drag this link to your toolbar:</p>
-<p><a class="bm" href="javascript:var urlistwitter=window.location.href.split('/')[2].split('.'); if(urlistwitter[urlistwitter.length-2]==='twitter')window.localStorage.removeItem('dm_threads');document.querySelector('#user-dropdown-toggle .nav-new').style.display='none';">Mark DMs as Read</a></p>
+<p><a class="bm" href="javascript:var urlistwitter=window.location.href.split('/')[2].split('.'); if(urlistwitter[urlistwitter.length-2]==='twitter')window.localStorage.removeItem('dm_threads'); urlistwitter = document.querySelector('#user-dropdown-toggle .nav-new').style.display='none';">Mark DMs as Read</a></p>
 <p>Created by <a href="http://twitter.com/estellevw">@estellevw</a>. Pull request for improvements welcome.</p> 
 </body>
 </html>
