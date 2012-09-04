@@ -33,8 +33,8 @@ if(urlistwitter[urlistwitter.length-2]==='twitter') {
 // remove the icon that makes them appear unread
 document.querySelector('#user-dropdown-toggle .nav-new').classList.remove('nav-new');
 </pre>
-<p>Drag this link to your toolbar:</p>
+<p>Drag this link to your toolbar. When you need to, click it when your Twitter window has focus to remove the localStorage entry and that annoying blue 'unread' icon:</p>
 <p><a class="bm" href="javascript:var urlistwitter=window.location.href.split('/')[2].split('.'); if(urlistwitter[urlistwitter.length-2]==='twitter')window.localStorage.removeItem('dm_threads'); document.querySelector('#user-dropdown-toggle .nav-new').classList.remove('nav-new');">Mark DMs as Read</a></p>
-<p>Created by <a href="http://twitter.com/estellevw">@estellevw</a>. Pull request for improvements welcome.</p> 
+<p style="margin-top: 100px;">Created by <a href="http://twitter.com/estellevw">@estellevw</a>. Pull request for improvements welcome.</p> 
 </body>
 </html>
